@@ -1,0 +1,14 @@
+name: Build Ergodox EZ firmware
+
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@01daf5113fa50804558f21cc074ab99ba84ddeaf
+    with:
+      qmk_repo: qmk/qmk_firmware
+      # QMK 0.34.8
+      qmk_ref: ec8a1b6549a059cac1d284ec8b6377f63af75d05
